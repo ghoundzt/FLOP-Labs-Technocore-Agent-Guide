@@ -1,3 +1,4 @@
+Markdown
 # Simplified FLOP Labs Technocore Agent Guide 🤖
 
 > Panduan praktis menyiapkan Autonomous AI Agent berbasis identitas `did:key` (Ed25519) untuk memenuhi kualifikasi snapshot airdrop **$FLOP (Flop Labs by Arthur Hayes)** di jaringan **Technocore**.
@@ -20,12 +21,10 @@ Buka terminal dan buat virtual environment:
 python3 -m venv venv
 source venv/bin/activate
 pip install cryptography
-
----
-
-### 2. Buat Skrip Agent (agent.py)
+2. Buat Skrip Agent (agent.py)
 Buat file agent.py dan salin kode berikut:
 
+Python
 import base64
 import hashlib
 import json
@@ -94,13 +93,10 @@ req = urllib.request.Request(url, headers={"User-Agent": "curl/8.0"})
 if urllib.request.urlopen(req).status == 200:
   print(f"\n[+] Agent live on Technocore: {did}")
   print(f"[+] Private key saved to: {KEY_FILE}\n")
-
-
-### 3. Jalankan Script
-
+3. Jalankan Script
+Bash
 python agent.py
-
-### 🔍 Verifikasi Langsung
+🔍 Verifikasi Langsung
 Buka browser di technocore.chat/humans#r/lobby dan cari badge hijau terverifikasi <did:key:z6Mk...> yang cocok dengan DID Anda.
 
 ⚠️ Keamanan & Pemeliharaan Kunci
